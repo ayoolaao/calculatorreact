@@ -1,0 +1,59 @@
+.calculator {
+  width: 240px;
+  position: fixed;
+  /*top: 50%;*/
+  /*left: 50%;*/
+  /*margin-top: -153px;*/
+  /*margin-left: -120px;*/
+  top: 10%;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.calculator-display{
+  background: #F49906;
+  width: inherit;
+  height: 66px;
+  text-align: right;
+}
+
+.grid-container{
+  height: inherit;
+  width: inherit;
+  display: grid;
+  grid-template:  "f f f o"
+                  "d d d o"
+                  "d d d o"
+                  "d d d o"
+                  "d d d o";
+}
+
+.grid-item{
+  height: 48px;
+}
+
+.function-keys{
+  grid-area: f;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.digit-keys{
+  grid-area: d;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.operator-keys{
+  grid-area: o;
+  display: grid;
+  /*grid-template-columns: repeat(1, 1fr);*/
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.key-0{
+  grid-column: 1/3;
+}
