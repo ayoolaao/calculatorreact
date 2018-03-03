@@ -167,29 +167,29 @@ class Calculator extends Component {
         <CalculatorDisplay value={displayValue}/>
         <div className="calculator-keypad grid-container">
           <div className="input-keys function-keys">
-            <CalculatorKey className="key-clear grid-item">C</CalculatorKey>
-            <CalculatorKey className="key-sign grid-item">±</CalculatorKey>
-            <CalculatorKey className="key-percent grid-item">%</CalculatorKey>
+            <CalculatorKey className="key-clear grid-item" onPress={() => cleaDisplay ? this.clearDisplay() : this.clearAll()}>{clearText}</CalculatorKey>
+            <CalculatorKey className="key-sign grid-item" onPress={() => this.toggleSign()}>±</CalculatorKey>
+            <CalculatorKey className="key-percent grid-item" onPress={() => this.inputPercent()}>%</CalculatorKey>
           </div>
           <div className="input-keys digit-keys">
             <CalculatorKey className="key-7 grid-item" onPress={() => this.inputDigit(7)}>7</CalculatorKey>
-            <CalculatorKey className="key-8 grid-item">8</CalculatorKey>
-            <CalculatorKey className="key-9 grid-item">9</CalculatorKey>
-            <CalculatorKey className="key-4 grid-item">4</CalculatorKey>
-            <CalculatorKey className="key-5 grid-item">5</CalculatorKey>
-            <CalculatorKey className="key-6 grid-item">6</CalculatorKey>
-            <CalculatorKey className="key-1 grid-item">1</CalculatorKey>
-            <CalculatorKey className="key-2 grid-item">2</CalculatorKey>
-            <CalculatorKey className="key-3 grid-item">3</CalculatorKey>
-            <CalculatorKey className="key-0 grid-item">0</CalculatorKey>
-            <CalculatorKey className="key-dot grid-item">●</CalculatorKey>
+            <CalculatorKey className="key-8 grid-item" onPress={() => this.inputDigit(8)}>8</CalculatorKey>
+            <CalculatorKey className="key-9 grid-item" onPress={() => this.inputDigit(9)}>9</CalculatorKey>
+            <CalculatorKey className="key-4 grid-item" onPress={() => this.inputDigit(4)}>4</CalculatorKey>
+            <CalculatorKey className="key-5 grid-item" onPress={() => this.inputDigit(5)}>5</CalculatorKey>
+            <CalculatorKey className="key-6 grid-item" onPress={() => this.inputDigit(6)}>6</CalculatorKey>
+            <CalculatorKey className="key-1 grid-item" onPress={() => this.inputDigit(1)}>1</CalculatorKey>
+            <CalculatorKey className="key-2 grid-item" onPress={() => this.inputDigit(2)}>2</CalculatorKey>
+            <CalculatorKey className="key-3 grid-item" onPress={() => this.inputDigit(3)}>3</CalculatorKey>
+            <CalculatorKey className="key-0 grid-item" onPress={() => this.inputDigit(0)}>0</CalculatorKey>
+            <CalculatorKey className="key-dot grid-item" onPress={() => this.inputDot()}>.</CalculatorKey>
           </div>
           <div className="operator-keys">
-            <CalculatorKey className="grid-item">/</CalculatorKey>
-            <CalculatorKey className="grid-item">*</CalculatorKey>
-            <CalculatorKey className="grid-item">-</CalculatorKey>
-            <CalculatorKey className="grid-item">+</CalculatorKey>
-            <CalculatorKey className="grid-item">=</CalculatorKey>
+            <CalculatorKey className="key-divide grid-item" onPress={() => this.performOperation('/')}>/</CalculatorKey>
+            <CalculatorKey className="key-multiply grid-item" onPress={() => this.performOperation('*')}>x</CalculatorKey>
+            <CalculatorKey className="key-subtract grid-item" onPress={() => this.performOperation('-')}>-</CalculatorKey>
+            <CalculatorKey className="key-add grid-item" onPress={() => this.performOperation('+')}>+</CalculatorKey>
+            <CalculatorKey className="key-equals grid-item" onPress={() => this.performOperation('=')}>=</CalculatorKey>
           </div>
         </div>
       </div>

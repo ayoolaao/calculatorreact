@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 
 import AutoScalingText from '../components/AutoScalingText';
+import '../styles/CalculatorDisplay.css';
 
 export default class CalculatorDisplay extends Component{
   render(){

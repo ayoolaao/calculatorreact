@@ -1,0 +1,21 @@
+.calculator-display{
+    box-sizing: border-box;
+    background: #555555;
+    border-top: #fff solid 1px;
+    border-left: #fff solid 1px;
+    border-right: #fff solid 1px;
+    border-radius: 20px 20px 0 0;
+    color: white;
+    width: inherit;
+    height: 120px;
+    /*text-align: right;*/
+}
+
+.auto-scaling-text{
+    padding: 35px 20px;
+    display: inline-block;
+    transform-origin: right;
+    position: absolute;
+    font-size: 52px;
+    right: 0;
+}

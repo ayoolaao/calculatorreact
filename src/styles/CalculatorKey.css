@@ -1,0 +1,20 @@
+.calculator-key {
+    box-sizing: border-box;
+    background-color: #C6C6C6;
+    border: #555555 solid 1px;
+    /*border: none;*/
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 34px;
+}
+
+.calculator-key:hover{
+    box-sizing: border-box;
+    background-color: #555555;
+    border: #D0021B solid 1px;
+}
+
+.calculator-key:active{
+    text-decoration: none;
+}
